@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_linear_color"
+    tools:context="fragments.HomeFragment">
+    <!-- Main content area -->
+    <!-- Add your main content here -->
+
+    <!-- Bottom Navigation View -->
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:backgroundTint="@color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/propcimg"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_pet_head"
+                        android:background="@color/light_grey"
+                        app:shapeAppearanceOverlay="@style/profilePicRound" />
+
+                    <TextView
+                        android:id="@+id/username"
+                        android:layout_width="205dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="sans-serif-black"
+                        android:gravity="center"
+                        android:text="Username"
+                        android:textAlignment="center"
+                        android:textColor="#040404"
+                        android:textSize="20sp" />
+
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/petcount"-->
+<!--                        android:layout_width="150dp"-->
+<!--                        android:layout_height="39dp"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:background="@drawable/petcount"-->
+<!--                        android:backgroundTint="@color/teal_200"-->
+<!--                        android:fontFamily="sans-serif-black"-->
+<!--                        android:gravity="center"-->
+<!--                        android:text="Pet Count"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:textColor="#040404"-->
+<!--                        android:textSize="20sp" />-->
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+
+                android:backgroundTint="#FF03DAC5"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="-220dp"
+                android:gravity="center">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="350dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+
+                    app:cardCornerRadius="50dp">
+
+                    <ImageView
+                        android:id="@+id/eventimg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:contentDescription="TODO"
+                        android:paddingLeft="0dp"
+                        android:paddingRight="0dp"
+                        android:paddingBottom="0dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_pet_banner"
+                        tools:ignore="ContentDescription,HardcodedText" />
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="00dp"
+                android:background="@drawable/bg_transparent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="40dp"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/buttonProfiling"
+                        android:layout_width="152dp"
+                        android:layout_height="146dp"
+                        android:layout_marginTop="44dp"
+                        android:background="@drawable/home_button"
+                        android:drawableTop="@drawable/home_paw"
+                        android:text="Pet Profiling"
+                        app:backgroundTint="@color/dark_green"
+                        app:layout_constraintEnd_toStartOf="@+id/buttonVaccine"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/buttonVaccine"
+                        android:layout_width="152dp"
+                        android:layout_height="146dp"
+                        android:layout_marginTop="44dp"
+                        android:background="@drawable/home_button"
+                        android:drawableTop="@drawable/home_schedule"
+                        android:text="Vaccine Appointment"
+                        app:backgroundTint="@color/dark_green"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.822"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/buttonSighting"
+                        android:layout_width="152dp"
+                        android:layout_height="146dp"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/home_button"
+                        android:drawableTop="@drawable/home_camera"
+                        android:text="Stray Reports"
+                        app:backgroundTint="@color/dark_green"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.119"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/buttonProfiling" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/buttonGT"
+                        android:layout_width="152dp"
+                        android:layout_height="146dp"
+                        android:layout_marginTop="44dp"
+                        android:background="@drawable/home_button"
+                        android:drawableTop="@drawable/home_tips"
+                        android:text="Tips"
+                        app:backgroundTint="@color/dark_green"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.822"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/buttonVaccine" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/buttonNews"
+                        android:layout_width="152dp"
+                        android:layout_height="146dp"
+                        android:layout_marginTop="44dp"
+                        android:background="@drawable/home_button"
+                        android:drawableTop="@drawable/home_news"
+                        android:text="News"
+                        app:backgroundTint="@color/dark_green"
+                        app:layout_constraintEnd_toStartOf="@+id/buttonFeedback"
+                        app:layout_constraintHorizontal_bias="0.436"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/buttonSighting" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/buttonFeedback"
+                        android:layout_width="152dp"
+                        android:layout_height="146dp"
+                        android:layout_marginTop="44dp"
+                        android:background="@drawable/home_button"
+                        android:drawableTop="@drawable/home_feedback"
+                        android:text="Feedback"
+                        app:backgroundTint="@color/dark_green"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.822"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/buttonGT" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/map"
+                        android:layout_width="152dp"
+                        android:layout_height="146dp"
+                        android:layout_marginTop="44dp"
+                        android:background="@drawable/home_button"
+                        android:drawableTop="@drawable/home_map"
+                        android:text="Map"
+                        app:backgroundTint="@color/dark_green"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.822"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/buttonGT" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

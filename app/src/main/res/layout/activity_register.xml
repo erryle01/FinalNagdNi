@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_linear_color"
+    tools:context=".RegisterActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:ignore="UselessParent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="36dp"
+                android:text="Pets Stray Watch"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textLogin"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="156dp"
+                android:text="Create an account"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textTitle" />
+
+            <EditText
+                android:id="@+id/registerEmail"
+                android:layout_width="295dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:height="60dp"
+                android:autofillHints=""
+                android:background="@drawable/input_textfield"
+                android:drawableStart="@drawable/baseline_alternate_email_24"
+                android:drawablePadding="12dp"
+                android:ems="10"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:padding="12dp"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/registerName"
+                tools:ignore="TextSizeCheck" />
+
+            <EditText
+                android:id="@+id/registerPassword"
+                android:layout_width="295dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:height="60dp"
+                android:autofillHints=""
+                android:background="@drawable/input_textfield"
+                android:drawableStart="@drawable/baseline_lock_24"
+                android:drawableEnd="@drawable/baseline_remove_red_eye_24"
+                android:drawablePadding="12dp"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="12dp"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/registerEmail"
+                tools:ignore="TextSizeCheck,DuplicateClickableBoundsCheck,DuplicateSpeakableTextCheck" />
+
+            <!-- Divider View -->
+
+            <EditText
+                android:id="@+id/confirmRegisterPassword"
+                android:layout_width="295dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:height="60dp"
+                android:autofillHints=""
+                android:background="@drawable/input_textfield"
+                android:drawableStart="@drawable/baseline_lock_24"
+                android:drawableEnd="@drawable/baseline_remove_red_eye_24"
+                android:drawablePadding="12dp"
+                android:ems="10"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:padding="12dp"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.517"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/registerPassword"
+                tools:ignore="TextSizeCheck" />
+
+
+            <Button
+                android:id="@+id/registerButton"
+                android:layout_width="295dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/black_button"
+                android:text="Register"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.508"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/confirmRegisterPassword" />
+
+
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="222dp"
+                android:layout_height="140dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_pet_logo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textTitle"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/alreadyHaveAnAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textSize="16sp"
+                android:text="already have an account"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/registerButton" />
+
+            <EditText
+                android:id="@+id/registerName"
+                android:layout_width="295dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:height="60dp"
+                android:autofillHints=""
+                android:drawableStart="@drawable/baseline_person_24"
+                android:background="@drawable/input_textfield"
+
+                android:drawablePadding="12dp"
+                android:ems="10"
+                android:hint="Name"
+                android:inputType="text"
+                android:padding="12dp"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textLogin"
+                tools:ignore="TextSizeCheck" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>
