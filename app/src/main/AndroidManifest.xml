@@ -15,12 +15,13 @@
         <activity
             android:name=".view.News"
             android:exported="false" />
-        <activity
-            android:name=".view.Schedule"
-            android:exported="false" />
+        <activity android:name=".ScheduleActivity"
+            />
+
         <activity
             android:name=".view.PetProfile"
             android:exported="false" />
+
         <activity
             android:name=".fragments.MapsActivity"
             android:exported="false" />
@@ -33,6 +34,10 @@
         <activity
             android:name=".MainActivity"
             android:exported="false" />
+        <activity
+            android:name=".AdminActivity"
+            android:exported="false" />
+
         <activity
             android:name=".LoginActivity"
             android:exported="true">

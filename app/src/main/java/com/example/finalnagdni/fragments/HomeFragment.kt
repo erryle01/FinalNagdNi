@@ -9,9 +9,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
+import com.example.finalnagdni.AdminActivity
 import com.example.finalnagdni.R
 import com.example.finalnagdni.view.Feedback
 import com.example.finalnagdni.view.News
+import com.example.finalnagdni.view.PetProfile
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.imageview.ShapeableImageView
 import com.google.firebase.auth.FirebaseAuth
@@ -61,7 +63,7 @@ class HomeFragment : Fragment() {
             // Call signOut method to log out the user
 
             // After signing out, navigate back to LoginActivity
-            val intent = Intent(activity,  News::class.java)
+            val intent = Intent(activity,  PetProfile::class.java)
             startActivity(intent)
 
         }
@@ -69,7 +71,7 @@ class HomeFragment : Fragment() {
         // Vaccine button listener
         vaccineButton.setOnClickListener {
             // Create an intent to navigate to the VaccineSchedule activity
-            val intent = Intent(activity, News::class.java)
+            val intent = Intent(activity, AdminActivity::class.java)
             startActivity(intent)
         }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,7 +13,7 @@
 
     <TextView
         android:id="@+id/textTitle"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="36dp"
@@ -21,22 +21,24 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+         />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="222dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_pet_logo"
+        android:layout_gravity="center" />
     <TextView
         android:id="@+id/textLogin"
-        android:layout_width="0dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="156dp"
+
         android:text="Create An Account"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTitle" />
+        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/loginEmail"
@@ -53,9 +55,7 @@
         android:inputType="textEmailAddress"
         android:padding="12dp"
         android:textSize="13sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textLogin"
+        android:layout_gravity="center"
         tools:ignore="TextSizeCheck" />
 
     <EditText
@@ -74,9 +74,7 @@
         android:inputType="textPassword"
         android:padding="12dp"
         android:textSize="13sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginEmail"
+       android:layout_gravity="center"
         tools:ignore="TextSizeCheck,DuplicateClickableBoundsCheck,DuplicateSpeakableTextCheck" />
 
     <!-- Divider View -->
@@ -89,22 +87,17 @@
         android:layout_marginTop="44dp"
         android:background="@drawable/black_button"
         android:text="Login"
+        android:layout_marginBottom="20dp"
         android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginPassword" />
+        android:layout_gravity="center" />
 
     <TextView
         android:id="@+id/dontHaveAnAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="12dp"
         android:text="dont have an account sign up"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
+       android:layout_gravity="center" />
 
 <!--    <View-->
 <!--        android:id="@+id/view"-->
@@ -158,18 +151,7 @@
 <!--        app:layout_constraintTop_toBottomOf="@+id/textView2"-->
 <!--        tools:ignore="RtlHardcoded" />-->
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="222dp"
-        android:layout_height="140dp"
-        android:layout_marginTop="8dp"
-        android:src="@drawable/ic_pet_logo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTitle"
-        app:layout_constraintVertical_bias="0.012" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

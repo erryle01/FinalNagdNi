@@ -4,7 +4,6 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.finalnagdni.fragments.HomeFragment
-import com.example.finalnagdni.fragments.MessageFragment
 import com.example.finalnagdni.fragments.ProfileFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -39,13 +38,10 @@ class MainActivity : AppCompatActivity() {
 //                    true
 //                }
                 R.id.navigation_item2 -> {
-                    replaceFragment(MessageFragment())
-                    true
-                }
-                R.id.navigation_item3 -> {
                     replaceFragment(ProfileFragment())
                     true
                 }
+
                 else -> false
             }
         }

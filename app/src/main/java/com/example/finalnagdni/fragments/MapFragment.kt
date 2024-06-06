@@ -1,7 +1,5 @@
 package com.example.finalnagdni.fragments
 
-
-
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.EditText
@@ -64,13 +62,13 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMapCli
 
         dialogBuilder.setTitle("Add Marker")
         dialogBuilder.setMessage("Enter marker details:")
-        dialogBuilder.setPositiveButton("Add") { dialog, which ->
+        dialogBuilder.setPositiveButton("Add") { _, _ ->
             val title = etTitle.text.toString()
             val snippet = etSnippet.text.toString()
             addMarker(point, title, snippet)
             savePinpointToFirestore(point, title, snippet)
         }
-        dialogBuilder.setNegativeButton("Cancel") { dialog, which ->
+        dialogBuilder.setNegativeButton("Cancel") { dialog, _ ->
             dialog.dismiss()
         }
 
@@ -89,17 +87,18 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMapCli
         AlertDialog.Builder(this)
             .setTitle("Delete Pinpoint")
             .setMessage("Are you sure you want to delete this pinpoint?")
-            .setPositiveButton("Yes") { dialog, which ->
+            .setPositiveButton("Yes") { _, _ ->
                 // Delete the pinpoint
                 deletePinpointFromFirestore(markersMap[marker] ?: "")
                 marker.remove()
                 markersMap.remove(marker)
             }
-            .setNegativeButton("No") { dialog, which ->
+            .setNegativeButton("No") { dialog, _ ->
                 dialog.dismiss()
             }
             .show()
     }
+
     private fun deletePinpointFromFirestore(pinpointId: String) {
         // Delete pinpoint from Firestore
         db.collection("pinpoints")
